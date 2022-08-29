@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Experience t)
         {
-            _ExperienceDal.Delete(t);
+             _ExperienceDal.Delete(t);
         }
 
         public Experience TGetByID(int id)

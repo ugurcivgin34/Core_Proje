@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Portfolio t)
         {
-            _PortfolioDal.Delete(t);
+             _PortfolioDal.Delete(t);
         }
 
         public Portfolio TGetByID(int id)

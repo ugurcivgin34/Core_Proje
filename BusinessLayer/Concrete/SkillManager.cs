@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Skill t)
         {
-            _skillDal.Delete(t);
+             _skillDal.Delete(t);
         }
 
         public Skill TGetByID(int id)

@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Service t)
         {
-            _serviceDal.Delete(t);
+             _serviceDal.Delete(t);
         }
 
         public Service TGetByID(int id)

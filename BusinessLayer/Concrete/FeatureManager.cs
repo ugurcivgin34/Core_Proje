@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Feature t)
         {
-            _featureDal.Delete(t);
+             _featureDal.Delete(t);
         }
 
         public Feature TGetByID(int id)

@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Message t)
         {
-            _messageDal.Delete(t);
+             _messageDal.Delete(t);
         }
 
         public Message TGetByID(int id)
