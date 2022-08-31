@@ -2,7 +2,7 @@
 @model List<Skill>
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
 <div class="card-header border-0">
@@ -25,31 +25,29 @@
 
             @foreach (var item in Model)
             {
-            <tr>
-                <th>
-                    @item.SkillID
-                </th>
-                <td class="budget">
-                    @item.Title
-
-                </td>
-                <td>
-                    <div class="d-flex align-items-center">
-                        <span class="completion mr-2">@item.Value</span>
-                        <div>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="@item.Value" aria-valuemin="0" aria-valuemax="100" style="width: @item.Value%;"></div>
+                <tr>
+                    <th>
+                        @item.SkillID
+                    </th>
+                    <td class="budget">
+                        @item.Title
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <span class="completion mr-2">@item.Value %</span>
+                            <div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="@item.Value" aria-valuemin="0" aria-valuemax="100" style="width: @item.Value%;"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </td>
-                <td><a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-danger">Sil</a></td>
-                <td><a href="/Skill/EditSkill/@item.SkillID" class="btn btn-info">Güncelle</a></td>
-            </tr>
+                    </td>
+                    <td><a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Skill/EditSkill/@item.SkillID" class="btn btn-info">Güncelle</a></td>
+                </tr>
             }
         </tbody>
     </table>
-
     <a href="/Skill/AddSkill/" class="btn btn-primary">Yeni Yetenek Ekle</a>
 </div>
-
+@*<script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/vendors/js/vendor.bundle.base.js"></script>*@
