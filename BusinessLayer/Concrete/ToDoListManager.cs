@@ -13,6 +13,10 @@ namespace BusinessLayer.Concrete
     {
         IToDoListDal _toDoListDal;
 
+        public ToDoListManager()
+        {
+        }
+
         public ToDoListManager(IToDoListDal toDoListDal)
         {
             _toDoListDal = toDoListDal;
