@@ -36,8 +36,8 @@ namespace Core_Proje.Controllers
             MessageManager messageManager = new MessageManager(new EfMessageDal());
             p.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString()); //Mesajın veritabanına kaydedildiği tarih veritabanına yazılsın
             p.Status = true;//Aktif mesaj, okuduktan sonra pasif e çekiceğiz
-
-            return PartialView(p);
+            messageManager.TAdd(p);
+            return PartialView();
 
         }
     }
